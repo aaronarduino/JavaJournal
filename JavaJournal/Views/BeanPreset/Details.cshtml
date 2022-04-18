@@ -1,0 +1,60 @@
+@model JavaJournal.Models.BeanPreset
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>BeanPreset</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PresetName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PresetName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Roastery)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Roastery)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Origin)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Origin)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BeanType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BeanType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Roast)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Roast)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Grind)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Grind)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.BeanPresetId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

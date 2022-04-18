@@ -1,0 +1,66 @@
+@model JavaJournal.Models.BeanPreset
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>BeanPreset</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PresetName" class="control-label"></label>
+                <input asp-for="PresetName" class="form-control" />
+                <span asp-validation-for="PresetName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Roastery" class="control-label"></label>
+                <input asp-for="Roastery" class="form-control" />
+                <span asp-validation-for="Roastery" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Origin" class="control-label"></label>
+                <input asp-for="Origin" class="form-control" />
+                <span asp-validation-for="Origin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BeanType" class="control-label"></label>
+                <select asp-for="BeanType" class="form-control"
+                        asp-items="Html.GetEnumSelectList<JavaJournal.Enums.BeanTypes>()">>
+                <option>Select Type...</option>
+                </select>
+                <span asp-validation-for="BeanType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Roast" class="control-label"></label>
+                <input asp-for="Roast" class="form-control" />
+                <span asp-validation-for="Roast" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Grind" class="control-label"></label>
+                <input asp-for="Grind" class="form-control" />
+                <span asp-validation-for="Grind" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
